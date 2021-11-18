@@ -237,12 +237,11 @@ suite('Functional Tests', function() {
                 .request(server)
                 .delete('/api/issues/apitest')
                 .send({
-                    _id: "61961fb4eff542f4d2c73a82" //update
+                    _id: "6196211f94683cd15ed4c359" //update
                 })
                 .end((err, res) => {
                     assert.equal(res.status, 200);                    
                     assert.equal(res.body.result, "successfully deleted");
-                    assert.equal(res.body._id, "61961fb4eff542f4d2c73a82")
                     done();
                 });
         });
